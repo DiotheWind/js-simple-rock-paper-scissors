@@ -1,9 +1,20 @@
-let playerScore;
-let computerScore;
+let playerScore = 0;
+let computerScore = 0;
 
 function game(){
     for(let i = 1; i <= 5; i++){
         playRound(getPlayerChoice(), getComputerChoice());
+    }
+
+    console.log(`You: ${playerScore}`);
+    console.log(`Computer: ${computerScore}`);
+
+    if(playerScore === computerScore){
+        console.log("It's a tie");
+    }else if(playerScore > computerScore){
+        console.log("You won the game!");
+    }else{
+        console.log("Sadly, you lost the game!");
     }
 }
 
@@ -42,5 +53,7 @@ function getComputerChoice(){
     const computerChoice = ["rock", "paper", "scissors"];
     return computerChoice[Math.floor(Math.random() * 3)];
 }   
+
+game();
 
 
