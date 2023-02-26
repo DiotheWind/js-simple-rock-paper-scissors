@@ -22,7 +22,9 @@ function game(){
 
 // Function to compare player's selection and computer's selection and displays the result
 function playRound(playerSelection, computerSelection){
-    if((playerSelection === "rock" && computerSelection === "rock") || (playerSelection === "paper" && computerSelection === "paper") || (playerSelection === "scissors" && computerSelection === "scissors")){
+    if((playerSelection === "rock" && computerSelection === "rock") 
+    || (playerSelection === "paper" && computerSelection === "paper") 
+    || (playerSelection === "scissors" && computerSelection === "scissors")){
         console.log(`It's a tie because the computer also chose ${computerSelection}`)
     }else if(playerSelection === "rock" && computerSelection === "paper"){
         console.log("You lose! Computer chose paper");
