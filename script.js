@@ -1,6 +1,8 @@
+// Variables to keep track of player and computer score
 let playerScore = 0;
 let computerScore = 0;
 
+// Main function where five rounds of rock, paper, and scissors are played and displays who won the entire game
 function game(){
     for(let i = 1; i <= 5; i++){
         playRound(getPlayerChoice(), getComputerChoice());
@@ -18,6 +20,7 @@ function game(){
     }
 }
 
+// Function to compare player's selection and computer's selection and displays the result
 function playRound(playerSelection, computerSelection){
     if((playerSelection === "rock" && computerSelection === "rock") || (playerSelection === "paper" && computerSelection === "paper") || (playerSelection === "scissors" && computerSelection === "scissors")){
         console.log(`It's a tie because the computer also chose ${computerSelection}`)
@@ -44,16 +47,19 @@ function playRound(playerSelection, computerSelection){
     }
 } 
 
+// The function where the player gets to choose rock, paper or scissors
 function getPlayerChoice(){
     let computerChoice = prompt("Enter your pick here");
     return computerChoice.toLowerCase().trim();   
 }
 
+// The function where the computer randomly chooses rock, paper or scissors
 function getComputerChoice(){
     const computerChoice = ["rock", "paper", "scissors"];
     return computerChoice[Math.floor(Math.random() * 3)];
 }   
 
+// Start the program
 game();
 
 
